@@ -1,0 +1,22 @@
+
+
+C:\Users\user\AppData\Local\Programs\Python\Python311\python.exe -m venv VenvFastAPI
+
+VenvFastAPI\Scripts\activate
+-------------------------------------------------------------------------------------
+
+https://fastapi.tiangolo.com/
+
+
+pip install "fastapi[all]"
+
+
+pip freeze > requirements.txt
+
+---
+
+uvicorn main:app --reload
+gunicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:80
+
+
+
